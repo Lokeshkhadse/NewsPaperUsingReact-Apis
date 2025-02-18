@@ -1,0 +1,193 @@
+/* Reset default margins & paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* 🔹 NAVIGATION BAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0077b6;
+  padding: 15px 40px;
+  color: white;
+}
+
+nav h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+.searchBar {
+  display: flex;
+  gap: 10px;
+}
+
+.searchBar input {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #0077b6;
+  border-radius: 5px;
+  outline: none;
+}
+
+.searchBar button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.searchBar button:hover {
+  background-color: #e03e00;
+}
+
+/* 🔹 CATEGORY BUTTONS */
+.categoryBtn {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.categoryBtn button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.categoryBtn button:hover {
+  background-color: #e63946;
+}
+
+/* 🔹 CARDS CONTAINER */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* 🔹 INDIVIDUAL CARD */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 15px;
+}
+
+.card .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0077b6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.card .title:hover {
+  color: #ff4500;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.card button {
+  background-color: #0077b6;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #005b8e;
+}
+
+/* 🔹 STAY UPDATED SECTION */
+.stayupdate {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .searchBar {
+    margin-top: 10px;
+  }
+
+  .categoryBtn {
+    flex-wrap: wrap;
+  }
+
+  .cardContainer {
+    padding: 10px;
+  }
+}
